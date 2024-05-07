@@ -19,6 +19,12 @@
               ninja
             ];
           };
+          c_http = pkgs.stdenv.mkDerivation {
+            name = "c_http";
+            src = ./src/main.c;
+            buildPhase = "make build";
+            installPhase = "make setup";
+          };
         }
     );
 }
