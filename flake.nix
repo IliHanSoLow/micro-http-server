@@ -16,6 +16,7 @@
         with pkgs; {
           devShells.default = mkShell {
             buildInputs = [
+              ninja
             ];
           };
         }
